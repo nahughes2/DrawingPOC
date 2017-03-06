@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawPOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bz2-is-XSe" userLabel="mainImage">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t8Q-fM-d9v" userLabel="tempDrawImage">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGi-0a-G6W">
+                                <rect key="frame" x="16" y="607" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="20s-hU-2Jo"/>
+                                    <constraint firstAttribute="width" constant="100" id="NLl-yZ-PWO"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WjA-bn-MjX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="t8Q-fM-d9v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CGy-sE-MgL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bz2-is-XSe" secondAttribute="bottom" id="F1P-dz-riz"/>
+                            <constraint firstItem="bz2-is-XSe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OFw-rs-Nhl"/>
+                            <constraint firstItem="t8Q-fM-d9v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uzk-h4-7Wd"/>
+                            <constraint firstItem="bz2-is-XSe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Yo4-ei-ctS"/>
+                            <constraint firstItem="VGi-0a-G6W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a9E-Ib-PZA"/>
+                            <constraint firstAttribute="trailing" secondItem="bz2-is-XSe" secondAttribute="trailing" id="dVk-D0-jHH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t8Q-fM-d9v" secondAttribute="bottom" id="lm8-sl-3bL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VGi-0a-G6W" secondAttribute="bottom" constant="20" id="sDk-Oh-pqP"/>
+                            <constraint firstAttribute="trailing" secondItem="t8Q-fM-d9v" secondAttribute="trailing" id="zI8-nx-rHw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="VGi-0a-G6W" id="Q1n-BM-J0o"/>
+                        <outlet property="mainImageView" destination="bz2-is-XSe" id="LXD-9Y-lCB"/>
+                        <outlet property="tempImageView" destination="t8Q-fM-d9v" id="Ok1-n1-p3L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
